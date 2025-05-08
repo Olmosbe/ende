@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encrypt_Decrypt</title>
+</head>
+<body>
+    <h1>Data exchange tunnel</h1>
+    
+    <form method="post">
+        <textarea name="text" rows="4" cols="50" placeholder="Put text here..."></textarea><br>
+        <button type="submit" name="action" value="encrypt">Encrypt</button>
+        <button type="submit" name="action" value="decrypt">Decrypt</button>
+    </form>
+
+    {% if result %}
+    <h2>Result:</h2>
+    <textarea rows="4" cols="50">{{ result }}</textarea>
+    {% endif %}
+
+    <style>
+        /* button{
+            display: grid;
+            column-gap: 50px;
+            color: rgb(31, 32, 31);
+            border-radius: 20%;
+            padding: 2px;
+            font-family: monospace;
+        } */
+
+        h1 {
+        /* background-color: rgb(rgb(13, 151, 190), blue); */
+        color: green;
+        }
+
+        h2 {
+            color: #04AA6D;
+        }
+
+        button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        button:hover {background-color: #3e8e41}
+
+        button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+        }
+        
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+# __pycache__ va kompilyatsiyalangan fayllar
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual muhitlar
+venv/
+.venv/
+.env/
+.env.bak/
+.env.local
+
+# OS fayllari
+.DS_Store
+Thumbs.db
+
+# IDE va editor sozlamalari
+.vscode/
+.idea/
+
+# Python paket fayllari
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Test va coverage fayllari
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Log va vaqtinchalik fayllar
+*.log
+*.tmp
+
+# MyPy, Pylint, venv tools
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# SQLite yoki boshqa vaqtinchalik bazalar
+*.db
+*.sqlite3
+
+# Uvicorn va gunicorn PID fayllari
+*.pid
+
+# FastAPI docs yoki schema fayllari (generate bo‘lsa)
+openapi.json
+schema.json
