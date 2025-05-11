@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Encrypt_Decrypt</title>
 
-    <!-- Google tag (gtag.js) -->
+     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-393BHXCLV4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -12,64 +13,131 @@
         gtag('config', 'G-393BHXCLV4');
     </script>
 
-</head>
-<body>
-    <h1>Data exchange tunnel</h1>
-    
-    <form method="post">
-        <textarea name="text" rows="4" cols="50" placeholder="Put text here..."></textarea><br>
-        <button type="submit" name="action" value="encrypt">Encrypt</button>
-        <button type="submit" name="action" value="decrypt">Decrypt</button>
-    </form>
-
-    {% if result %}
-    <h2>Result:</h2>
-    <textarea rows="4" cols="50">{{ result }}</textarea>
-    {% endif %}
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* button{
-            display: grid;
-            column-gap: 50px;
-            color: rgb(31, 32, 31);
-            border-radius: 20%;
-            padding: 2px;
-            font-family: monospace;
-        } */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f7f7f7;
+        }
 
         h1 {
-        /* background-color: rgb(rgb(13, 151, 190), blue); */
-        color: green;
+            color: green;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px #999;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
         }
 
         h2 {
             color: #04AA6D;
-        }
-
-        button {
-            display: inline-block;
-            padding: 15px 25px;
-            font-size: 24px;
-            cursor: pointer;
+            margin-top: 30px;
             text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #fff;
-            background-color: #04AA6D;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 9px #999;
         }
 
-        button:hover {background-color: #3e8e41}
+        @media (max-width: 600px) {
+            button {
+                font-size: 16px;
+                padding: 10px;
+            }
 
-        button:active {
-        background-color: #3e8e41;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
+            textarea {
+                font-size: 14px;
+            }
         }
-        
+
+        .result-box {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 10px;
+        }
+
+        .result-box textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            resize: vertical;
+            background-color: #f9f9f9;
+        }
+
+
+
     </style>
+</head>
+<body>
+
+    <h1>Data Exchange Tunnel</h1>
+    
+    <form method="post">
+        <textarea name="text" rows="4" placeholder="Put text here..."></textarea>
+        <div class="button-group">
+            <button type="submit" name="action" value="encrypt">Encrypt</button>
+            <button type="submit" name="action" value="decrypt">Decrypt</button>
+        </div>
+    </form>
+
+    {% if result %}
+    <h2>Result:</h2>
+    <div class="result-box">
+        <textarea rows="5" readonly>{{ result }}</textarea>
+    </div>
+    {% endif %}
+
 
 </body>
 </html>
